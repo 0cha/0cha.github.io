@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+
+Sitemap: http://0cha.github.io/sitemap.xml 
