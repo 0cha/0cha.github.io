@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[粗茶ですが]]></title>
-  <link href="http://0cha.github.io/atom.xml" rel="self"/>
+  <title><![CDATA[Category: UNO | 粗茶ですが]]></title>
+  <link href="http://0cha.github.io/blog/categories/uno/atom.xml" rel="self"/>
   <link href="http://0cha.github.io/"/>
   <updated>2013-08-17T11:11:56+09:00</updated>
   <id>http://0cha.github.io/</id>
@@ -50,11 +50,15 @@ ATTiny4313を知らずスケッチのビルドに失敗する。</p>
 
 <p>リリースノートを見てみると</p>
 
+<p></p>
+
 <pre><code>Release Notes
 Version 2013-02-12
 
 Header with I/O definitions for ATTiny4313 was inconsistent with data sheet. Fixed.
 </code></pre>
+
+<p></p>
 
 <p>・・・対応してんじゃん。</p>
 
@@ -72,8 +76,12 @@ Header with I/O definitions for ATTiny4313 was inconsistent with data sheet. Fix
 
 <p>どーん</p>
 
+<p></p>
+
 <pre><code>$ sudo cp -R /usr/local/CrossPack-AVR-20130212/* /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr&amp;nbsp;
 </code></pre>
+
+<p></p>
 
 <h2>Tinyな情報</h2>
 
@@ -93,36 +101,34 @@ Header with I/O definitions for ATTiny4313 was inconsistent with data sheet. Fix
 
 <p>Makefileは提供されているのでCrossPack for AVRさえ入れてbinにパス通してしまえば</p>
 
+<p></p>
+
 <pre><code>$ make
 $ make flash
 </code></pre>
+
+<p></p>
 
 <p>でいけちゃう。</p>
 
 <p>今回のようにArduinoISPを使う場合は、micomocoフォルダのMakefile21行目</p>
 
+<p></p>
+
 <pre><code>AVRDUDE = avrdude -c usbtiny -p$(MCU)
 </code></pre>
 
-<p>を</p>
+<p>
+を
+</p>
 
 <pre><code>AVRDUDE = avrdude -c arduino -p$(MCU)
 </code></pre>
 
-<p>に変更すればmake flashでArduinoISP経由でHEXが書き込まれます。</p>
+<p>
+に変更すればmake flashでArduinoISP経由でHEXが書き込まれます。</p>
 
 <p>勉強になったなぁ。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Logic Pro Xで32bitプラグインを使う]]></title>
-    <link href="http://0cha.github.io/blog/2013/08/15/32bit-plugin/"/>
-    <updated>2013-08-15T09:53:00+09:00</updated>
-    <id>http://0cha.github.io/blog/2013/08/15/32bit-plugin</id>
-    <content type="html"><![CDATA[<p><a href="https://www.apple.com/jp/logic-pro/">Logic Pro X</a>になって、AUプラグインが64bit専用になってしまいました。</p>
-
-<p>トリッキーな方法だけど、AU Labを使えば<a href="http://www.macprovideo.com/hub/logic-pro/how-to-run-32-bit-plug-ins-in-logic-pro-x">出来るらしい</a>。どうなんだろうこれ。</p>
 ]]></content>
   </entry>
   

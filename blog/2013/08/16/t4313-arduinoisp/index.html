@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>粗茶ですが</title>
+  <title>ATTiny4313にArduinoUNO R3で書き込む - 粗茶ですが</title>
   <meta name="author" content="0cha">
 
   
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://0cha.github.io/">
+  <link rel="canonical" href="http://0cha.github.io/blog/2013/08/16/t4313-arduinoisp/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -70,16 +70,13 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
-        <h1 class="entry-title"><a href="/blog/2013/08/16/t4313-arduinoisp/">ATTiny4313にArduinoUNO R3で書き込む</a></h1>
+      
+        <h1 class="entry-title">ATTiny4313にArduinoUNO R3で書き込む</h1>
       
     
     
@@ -103,7 +100,7 @@
   </header>
 
 
-  <div class="entry-content"><p>手軽なMIDIインターフェースが欲しくて、AVRで何かできないかと探してみたら<a href="http://morecatlab.akiba.coocan.jp/morecat_lab/MOCO.html">USB-MIDIコンバーター MICOMOCO</a>なるものを発見。</p>
+<div class="entry-content"><p>手軽なMIDIインターフェースが欲しくて、AVRで何かできないかと探してみたら<a href="http://morecatlab.akiba.coocan.jp/morecat_lab/MOCO.html">USB-MIDIコンバーター MICOMOCO</a>なるものを発見。</p>
 
 <p>なにこれ素敵。</p>
 
@@ -118,29 +115,96 @@ ATTiny4313を知らずスケッチのビルドに失敗する。</p>
 
 <p>という事で、新しいGCCをArduinoIDEに突っ込む備忘録。</p>
 
+<!-- more -->
+
+
+<h2>環境</h2>
+
+<p>OSX Lion 10.7.5</p>
+
+<p>Arduino IDE 1.05</p>
+
+<h2>CrossPack</h2>
+
+<p>AVR向けののGCCをビルドする方法はそんなに難しくなく、情報はごろごろ出てくる。が、不治の病である面倒くさい病にかかっているため他の手がないかggrggr。</p>
+
+<p>調べてみると<a href="http://www.obdev.at/products/crosspack/index.html">CrossPack for AVR</a>なるAVRの開発ツール一式が提供されてる。</p>
+
+<p>リリースノートを見てみると</p>
+
+<pre><code>Release Notes
+Version 2013-02-12
+
+Header with I/O definitions for ATTiny4313 was inconsistent with data sheet. Fixed.
+</code></pre>
+
+<p>・・・対応してんじゃん。</p>
+
+<p>しかもGCC 4.6.2。</p>
+
+<p>ということで上記のサイトからCrossPackのMac版をインストール。</p>
+
+<p>/usr/local/CrossPack-AVR-20130212</p>
+
+<p>上記のパスにインストールされる。</p>
+
+<p>中を覗いてみると、Aruidno.appの以下のパスの中とほとんど一緒。これは勝てる。</p>
+
+<p>/Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr</p>
+
+<p>どーん</p>
+
+<pre><code>$ sudo cp -R /usr/local/CrossPack-AVR-20130212/* /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr&amp;nbsp;
+</code></pre>
+
+<h2>Tinyな情報</h2>
+
+<p>ArduinoIDEがTinyなAVRの情報をもっていないので、その情報を追加。</p>
+
+<p><a href="http://code.google.com/p/arduino-tiny/downloads/list">arduino-tiny</a></p>
+
+<p>上記から、coreとかarduino-tinyとか取ってきて、Arduinoのドキュメントフォルダに突っ込めば終了。</p>
+
+<p>後はこの<a href="http://jimlaurwilliams.org/wordpress/?p=1883">記事</a>でも参考にすればOK。</p>
+
+<h2>実は</h2>
+
+<p>頑張ったけどArduinoIDE使わない(使えない)・・・。</p>
+
+<p>ArduinoIDEはスケッチをビルドしてAVRに書き込んでくれるけど、上記のMICOMOCOはCのソースで提供されているのでArduinoIDE用のスケッチはない。</p>
+
+<p>Makefileは提供されているのでCrossPack for AVRさえ入れてbinにパス通してしまえば</p>
+
+<pre><code>$ make
+$ make flash
+</code></pre>
+
+<p>でいけちゃう。</p>
+
+<p>今回のようにArduinoISPを使う場合は、micomocoフォルダのMakefile21行目</p>
+
+<pre><code>AVRDUDE = avrdude -c usbtiny -p$(MCU)
+</code></pre>
+
+<p>を</p>
+
+<pre><code>AVRDUDE = avrdude -c arduino -p$(MCU)
+</code></pre>
+
+<p>に変更すればmake flashでArduinoISP経由でHEXが書き込まれます。</p>
+
+<p>勉強になったなぁ。</p>
 </div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2013/08/16/t4313-arduinoisp/">Read on &rarr;</a>
-    </footer>
-  
 
 
-    </article>
-  
-  
-    <article>
+  <footer>
+    <p class="meta">
       
-  <header>
-    
-      <!-- Now we're back to normal posts. Note the links used under href in both headers.-->
-        <h1 class="entry-title"><a href="/blog/2013/08/15/32bit-plugin/">Logic Pro Xで32bitプラグインを使う</a></h1>
+  
+
+<span class="byline author vcard">Posted by <span class="fn">0cha</span></span>
+
       
-    
-    
-      <p class="meta">
-        
 
 
 
@@ -152,29 +216,46 @@ ATTiny4313を知らずスケッチのビルドに失敗する。</p>
   
 
 
-<time datetime="2013-08-15T09:53:00+09:00" pubdate data-updated="true">Aug 15<span>th</span>, 2013</time>
-        
-      </p>
+<time datetime="2013-08-16T21:16:00+09:00" pubdate data-updated="true">Aug 16<span>th</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/r3/'>R3</a>, <a class='category' href='/blog/categories/uno/'>UNO</a>, <a class='category' href='/blog/categories/arduino/'>arduino</a>, <a class='category' href='/blog/categories/avr/'>avr</a>
+  
+</span>
+
+
+    </p>
     
-  </header>
-
-
-  <div class="entry-content"><p><a href="https://www.apple.com/jp/logic-pro/">Logic Pro X</a>になって、AUプラグインが64bit専用になってしまいました。</p>
-
-<p>トリッキーな方法だけど、AU Labを使えば<a href="http://www.macprovideo.com/hub/logic-pro/how-to-run-32-bit-plug-ins-in-logic-pro-x">出来るらしい</a>。どうなんだろうこれ。</p>
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://0cha.github.io/blog/2013/08/16/t4313-arduinoisp/" data-via="0cha" data-counturl="http://0cha.github.io/blog/2013/08/16/t4313-arduinoisp/" >Tweet</a>
+  
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
 </div>
-  
-  
 
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left articlenav" href="/blog/2013/08/15/32bit-plugin/" title="Previous Post: Logic Pro Xで32bitプラグインを使う">&laquo; Logic Pro Xで32bitプラグインを使う</a>
+      
+      
+    </p>
+  </footer>
+</article>
 
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
+  </section>
+
+</div>
+
 <aside class="sidebar">
   
     <section>
@@ -199,6 +280,7 @@ ATTiny4313を知らずスケッチのビルドに失敗する。</p>
   
 </aside>
 
+
     </div>
   </div>
   <footer role="contentinfo"><p>
@@ -213,7 +295,10 @@ ATTiny4313を知らずスケッチのビルドに失敗する。</p>
       var disqus_shortname = '0cha';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://0cha.github.io/blog/2013/08/16/t4313-arduinoisp/';
+        var disqus_url = 'http://0cha.github.io/blog/2013/08/16/t4313-arduinoisp/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
