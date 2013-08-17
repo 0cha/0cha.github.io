@@ -4,7 +4,7 @@
   <title><![CDATA[粗茶ですが]]></title>
   <link href="http://0cha.github.io/atom.xml" rel="self"/>
   <link href="http://0cha.github.io/"/>
-  <updated>2013-08-17T11:11:56+09:00</updated>
+  <updated>2013-08-17T12:13:19+09:00</updated>
   <id>http://0cha.github.io/</id>
   <author>
     <name><![CDATA[0cha]]></name>
@@ -26,7 +26,7 @@
 
 <p>調べてみると<a href="http://arduino.cc/en/Main/arduinoBoardUno">Arduino IDE</a>にArduinoISPというスケッチがあって、<a href="http://www.geocities.jp/arduino_diecimila/use/arduino_dev.html">ArduinoがISPの代わりをしてくれるらしい。</a></p>
 
-<p>幸いな事に<a href="http://www.switch-science.com/catalog/789/">Arduino UNO R3</a>は持っているので、ISPの問題は解決かと思いきやArduino IDE Ver 1.05が中で使っているGCCのバージョン(4.3.2)が古いらしく、
+<p>幸いな事に<a href="http://www.switch-science.com/catalog/789/">Arduino UNO R3</a>は持っているので、ISPの問題は解決。が、Arduino IDE Ver 1.05が中で使っているGCCのバージョン(4.3.2)が古いらしく、
 ATTiny4313を知らずスケッチのビルドに失敗する。</p>
 
 <p>Oh&hellip;.</p>
