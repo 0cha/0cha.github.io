@@ -4,7 +4,7 @@
   <title><![CDATA[Category: midi | 粗茶ですが]]></title>
   <link href="http://0cha.github.io/blog/categories/midi/atom.xml" rel="self"/>
   <link href="http://0cha.github.io/"/>
-  <updated>2013-08-21T13:56:40+09:00</updated>
+  <updated>2013-08-21T15:26:52+09:00</updated>
   <id>http://0cha.github.io/</id>
   <author>
     <name><![CDATA[0cha]]></name>
@@ -26,6 +26,8 @@
 
 <p>その中でも取り分けて面白いのが「Scripter」で、
 MIDIのイベントをJavaScriptで加工する事が出来るというMIDIでStutterやりたい人にしか需要がなさそうなFXですw</p>
+
+<p>今回はさわりだけ説明したいと思いますが、JavaScriptを多少知っていないと辛い内容です。。。。そして知ってる人にはリファレンス読めば十分という何とも中途半端・・・。</p>
 
 <!-- more -->
 
