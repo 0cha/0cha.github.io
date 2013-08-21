@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Logic | 粗茶ですが]]></title>
-  <link href="http://0cha.github.io/blog/categories/logic/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Scripter | 粗茶ですが]]></title>
+  <link href="http://0cha.github.io/blog/categories/scripter/atom.xml" rel="self"/>
   <link href="http://0cha.github.io/"/>
   <updated>2013-08-21T13:56:40+09:00</updated>
   <id>http://0cha.github.io/</id>
@@ -153,17 +153,6 @@ function HandleMIDI(event) {
 <p>私もプログラミング自体が苦手なので、この文章を書くだけで四苦八苦しましたが・・・(^^;)</p>
 
 <p>では、また次回!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Logic Pro Xで32bitプラグインを使う]]></title>
-    <link href="http://0cha.github.io/blog/2013/08/15/32bit-plugin/"/>
-    <updated>2013-08-15T09:53:00+09:00</updated>
-    <id>http://0cha.github.io/blog/2013/08/15/32bit-plugin</id>
-    <content type="html"><![CDATA[<p><a href="https://www.apple.com/jp/logic-pro/">Logic Pro X</a>になって、AUプラグインが64bit専用になってしまいました。</p>
-
-<p>トリッキーな方法だけど、AU Labを使えば<a href="http://www.macprovideo.com/hub/logic-pro/how-to-run-32-bit-plug-ins-in-logic-pro-x">出来るらしい</a>。どうなんだろうこれ。</p>
 ]]></content>
   </entry>
   

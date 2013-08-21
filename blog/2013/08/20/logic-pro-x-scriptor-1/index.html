@@ -1,24 +1,120 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[粗茶ですが]]></title>
-  <link href="http://0cha.github.io/atom.xml" rel="self"/>
-  <link href="http://0cha.github.io/"/>
-  <updated>2013-08-21T13:56:40+09:00</updated>
-  <id>http://0cha.github.io/</id>
-  <author>
-    <name><![CDATA[0cha]]></name>
-    
-  </author>
-  <generator uri="http://octopress.org/">Octopress</generator>
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Logic Pro X: Scripterプラグインの使い方 その1 - 粗茶ですが</title>
+  <meta name="author" content="0cha">
 
   
-  <entry>
-    <title type="html"><![CDATA[Logic Pro X: Scripterプラグインの使い方 その1]]></title>
-    <link href="http://0cha.github.io/blog/2013/08/20/logic-pro-x-scriptor-1/"/>
-    <updated>2013-08-20T16:11:00+09:00</updated>
-    <id>http://0cha.github.io/blog/2013/08/20/logic-pro-x-scriptor-1</id>
-    <content type="html"><![CDATA[<p><a href="https://www.apple.com/jp/logic-pro/">Logic Pro X</a>では待望のMIDI FXが追加され、今までアルペジエータ1つ使うのに<a href="http://project-dtm.blogspot.jp/2011/06/logic-9.html">多大な苦労</a>をしていたのが大幅に改善されました。</p>
+  <meta name="description" content="Logic Pro Xでは待望のMIDI FXが追加され、今までアルペジエータ1つ使うのに多大な苦労をしていたのが大幅に改善されました。 デフォルトではアルペジエータをはじめランダマイザ、
+コードトリガなどポピュラーなFXが用意されており、
+デフォルトのFXだけでも非常に手軽で便利な物が揃ってます &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://0cha.github.io/blog/2013/08/20/logic-pro-x-scriptor-1/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="粗茶ですが" type="application/atom+xml">
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-43362817-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <div id="logo">
+  	<div id="logoLeft">{</div>
+  	<div id="logoText">blog</div>
+  	<div id="logoRight">}</div>
+  	<div class="clear"></div>
+  </div>
+  <h1><a href="/">粗茶ですが</a></h1>
+  
+    <h2>RubyとかArduinoとかDTMとか</h2>
+  
+  <div class="clear"></div>
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:0cha.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      
+        <h1 class="entry-title">Logic Pro X: Scripterプラグインの使い方 その1</h1>
+      
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-20T16:11:00+09:00" pubdate data-updated="true">Aug 20<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p><a href="https://www.apple.com/jp/logic-pro/">Logic Pro X</a>では待望のMIDI FXが追加され、今までアルペジエータ1つ使うのに<a href="http://project-dtm.blogspot.jp/2011/06/logic-9.html">多大な苦労</a>をしていたのが大幅に改善されました。</p>
 
 <p>デフォルトではアルペジエータをはじめランダマイザ、
 コードトリガなどポピュラーなFXが用意されており、
@@ -35,7 +131,7 @@ MIDIのイベントをJavaScriptで加工する事が出来るというMIDIでSt
 <p>「ソフトウェア音源」か「外部 MIDI」トラックを追加して、
 追加したトラックのミキサーで「MIDI FX」=> 「Scripter」を選択すればそのトラックにScripterが追加されます。</p>
 
-<p><img src="http://0cha.github.io/images/logic/scripter_mixer.png" title="Scripterを設定" alt="Scripterを設定"></p>
+<p><img src="/images/logic/scripter_mixer.png" title="Scripterを設定" alt="Scripterを設定"></p>
 
 <p>Scripterのウィンドウが開くので、「Open Script in Editor」を選択すると以下のコードが記述されたエディタが表示されて、</p>
 
@@ -56,7 +152,7 @@ MIDIのイベントをJavaScriptで加工する事が出来るというMIDIでSt
 
 <p>また、ソフトウェア音源を設定するか、MIDI音源を接続している場合、押した鍵盤の音やMIDIコンから送られたCC等が音源に適用されます。</p>
 
-<p><img src="http://0cha.github.io/images/logic/scripter_default.png" width="628" height="628" title="Script Editor" alt="Script Editor"></p>
+<p><img src="/images/logic/scripter_default.png" width="628" height="628" title="Script Editor" alt="Script Editor"></p>
 
 <h2>何が起きているのか</h2>
 
@@ -180,120 +276,151 @@ Noteオブジェクトであった場合event.pitchプロパティの値に+4し
 <p>私もプログラミング自体が苦手なので、この文章を書くだけで四苦八苦しましたが・・・(^^;)</p>
 
 <p>では、また次回!</p>
-]]></content>
-  </entry>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
   
-  <entry>
-    <title type="html"><![CDATA[ATTiny4313にArduinoUNO R3で書き込む]]></title>
-    <link href="http://0cha.github.io/blog/2013/08/16/t4313-arduinoisp/"/>
-    <updated>2013-08-16T21:16:00+09:00</updated>
-    <id>http://0cha.github.io/blog/2013/08/16/t4313-arduinoisp</id>
-    <content type="html"><![CDATA[<p>手軽なMIDIインターフェースが欲しくて、AVRで何かできないかと探してみたら<a href="http://morecatlab.akiba.coocan.jp/morecat_lab/MOCO.html">USB-MIDIコンバーター MICOMOCO</a>なるものを発見。</p>
 
-<p>なにこれ素敵。</p>
+<span class="byline author vcard">Posted by <span class="fn">0cha</span></span>
 
-<p>早速ATTiny4313ともろもろの部品揃えてさぁやろうと思ったんだけど、考えてみたらAVRのISPプログラマー持ってない。</p>
-
-<p>調べてみると<a href="http://arduino.cc/en/Main/arduinoBoardUno">Arduino IDE</a>にArduinoISPというスケッチがあって、<a href="http://www.geocities.jp/arduino_diecimila/use/arduino_dev.html">ArduinoがISPの代わりをしてくれるらしい。</a></p>
-
-<p>幸いな事に<a href="http://www.switch-science.com/catalog/789/">Arduino UNO R3</a>は持っているので、ISPの問題は解決。が、Arduino IDE Ver 1.05が中で使っているGCCのバージョン(4.3.2)が古いらしく、
-ATTiny4313を知らずスケッチのビルドに失敗する。</p>
-
-<p>Oh&hellip;.</p>
-
-<p>という事で、新しいGCCをArduinoIDEに突っ込む備忘録。</p>
-
-<!-- more -->
+      
 
 
-<h2>環境</h2>
 
-<p>OSX Lion 10.7.5</p>
 
-<p>Arduino IDE 1.05</p>
 
-<h2>CrossPack</h2>
 
-<p>AVR向けののGCCをビルドする方法はそんなに難しくなく、情報はごろごろ出てくる。が、不治の病である面倒くさい病にかかっているため他の手がないかggrggr。</p>
 
-<p>調べてみると<a href="http://www.obdev.at/products/crosspack/index.html">CrossPack for AVR</a>なるAVRの開発ツール一式が提供されてる。</p>
 
-<p>リリースノートを見てみると</p>
-
-<pre><code>Release Notes
-Version 2013-02-12
-
-Header with I/O definitions for ATTiny4313 was inconsistent with data sheet. Fixed.
-</code></pre>
-
-<p>・・・対応してんじゃん。</p>
-
-<p>しかもGCC 4.6.2。</p>
-
-<p>ということで上記のサイトからCrossPackのMac版をインストール。</p>
-
-<p>/usr/local/CrossPack-AVR-20130212</p>
-
-<p>上記のパスにインストールされる。</p>
-
-<p>中を覗いてみると、Aruidno.appの以下のパスの中とほとんど一緒。これは勝てる。</p>
-
-<p>/Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr</p>
-
-<p>どーん</p>
-
-<pre><code>$ sudo cp -R /usr/local/CrossPack-AVR-20130212/* /Applications/Arduino.app/Contents/Resources/Java/hardware/tools/avr&amp;nbsp;
-</code></pre>
-
-<h2>Tinyな情報</h2>
-
-<p>ArduinoIDEがTinyなAVRの情報をもっていないので、その情報を追加。</p>
-
-<p><a href="http://code.google.com/p/arduino-tiny/downloads/list">arduino-tiny</a></p>
-
-<p>上記から、coreとかarduino-tinyとか取ってきて、Arduinoのドキュメントフォルダに突っ込めば終了。</p>
-
-<p>後はこの<a href="http://jimlaurwilliams.org/wordpress/?p=1883">記事</a>でも参考にすればOK。</p>
-
-<h2>実は</h2>
-
-<p>頑張ったけどArduinoIDE使わない(使えない)・・・。</p>
-
-<p>ArduinoIDEはスケッチをビルドしてAVRに書き込んでくれるけど、上記のMICOMOCOはCのソースで提供されているのでArduinoIDE用のスケッチはない。</p>
-
-<p>Makefileは提供されているのでCrossPack for AVRさえ入れてbinにパス通してしまえば</p>
-
-<pre><code>$ make
-$ make flash
-</code></pre>
-
-<p>でいけちゃう。</p>
-
-<p>今回のようにArduinoISPを使う場合は、micomocoフォルダのMakefile21行目</p>
-
-<pre><code>AVRDUDE = avrdude -c usbtiny -p$(MCU)
-</code></pre>
-
-<p>を</p>
-
-<pre><code>AVRDUDE = avrdude -c arduino -p$(MCU)
-</code></pre>
-
-<p>に変更すればmake flashでArduinoISP経由でHEXが書き込まれます。</p>
-
-<p>勉強になったなぁ。</p>
-]]></content>
-  </entry>
   
-  <entry>
-    <title type="html"><![CDATA[Logic Pro Xで32bitプラグインを使う]]></title>
-    <link href="http://0cha.github.io/blog/2013/08/15/32bit-plugin/"/>
-    <updated>2013-08-15T09:53:00+09:00</updated>
-    <id>http://0cha.github.io/blog/2013/08/15/32bit-plugin</id>
-    <content type="html"><![CDATA[<p><a href="https://www.apple.com/jp/logic-pro/">Logic Pro X</a>になって、AUプラグインが64bit専用になってしまいました。</p>
 
-<p>トリッキーな方法だけど、AU Labを使えば<a href="http://www.macprovideo.com/hub/logic-pro/how-to-run-32-bit-plug-ins-in-logic-pro-x">出来るらしい</a>。どうなんだろうこれ。</p>
-]]></content>
-  </entry>
+
+<time datetime="2013-08-20T16:11:00+09:00" pubdate data-updated="true">Aug 20<span>th</span>, 2013</time>
+      
+
+<span class="categories">
   
-</feed>
+    <a class='category' href='/blog/categories/javascript/'>JavaScript</a>, <a class='category' href='/blog/categories/logic/'>Logic</a>, <a class='category' href='/blog/categories/scripter/'>Scripter</a>, <a class='category' href='/blog/categories/midi/'>midi</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://0cha.github.io/blog/2013/08/20/logic-pro-x-scriptor-1/" data-via="0cha" data-counturl="http://0cha.github.io/blog/2013/08/20/logic-pro-x-scriptor-1/" >Tweet</a>
+  
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left articlenav" href="/blog/2013/08/16/t4313-arduinoisp/" title="Previous Post: ATTiny4313にArduinoUNO R3で書き込む">&laquo; ATTiny4313にArduinoUNO R3で書き込む</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/08/20/logic-pro-x-scriptor-1/">Logic Pro X: Scripterプラグインの使い方 その1</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/08/16/t4313-arduinoisp/">ATTiny4313にArduinoUNO R3で書き込む</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/08/15/32bit-plugin/">Logic Pro Xで32bitプラグインを使う</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - 0cha -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = '0cha';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://0cha.github.io/blog/2013/08/20/logic-pro-x-scriptor-1/';
+        var disqus_url = 'http://0cha.github.io/blog/2013/08/20/logic-pro-x-scriptor-1/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
