@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: plugin | 粗茶ですが]]></title>
-  <link href="http://0cha.github.io/blog/categories/plugin/atom.xml" rel="self"/>
+  <title><![CDATA[Category: phonegap | 粗茶ですが]]></title>
+  <link href="http://0cha.github.io/blog/categories/phonegap/atom.xml" rel="self"/>
   <link href="http://0cha.github.io/"/>
   <updated>2013-12-16T18:12:50+09:00</updated>
   <id>http://0cha.github.io/</id>
