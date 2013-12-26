@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: plugin | 粗茶ですが]]></title>
+  <title><![CDATA[Category: Plugin | 粗茶ですが]]></title>
   <link href="http://0cha.github.io/blog/categories/plugin/atom.xml" rel="self"/>
   <link href="http://0cha.github.io/"/>
-  <updated>2013-12-16T18:12:50+09:00</updated>
+  <updated>2013-12-26T13:05:41+09:00</updated>
   <id>http://0cha.github.io/</id>
   <author>
     <name><![CDATA[0cha]]></name>
@@ -14,11 +14,13 @@
 
   
   <entry>
-    <title type="html"><![CDATA[PhoneGap用のネイティブプラグイン作成]]></title>
-    <link href="http://0cha.github.io/blog/2013/12/16/creating-native-plugin-for-phonegap/"/>
-    <updated>2013-12-16T15:04:35+09:00</updated>
-    <id>http://0cha.github.io/blog/2013/12/16/creating-native-plugin-for-phonegap</id>
-    <content type="html"><![CDATA[
+    <title type="html"><![CDATA[Logic Pro Xで32bitプラグインを使う]]></title>
+    <link href="http://0cha.github.io/blog/2013/08/15/32bit-plugin/"/>
+    <updated>2013-08-15T09:53:00+09:00</updated>
+    <id>http://0cha.github.io/blog/2013/08/15/32bit-plugin</id>
+    <content type="html"><![CDATA[<p><a href="https://www.apple.com/jp/logic-pro/">Logic Pro X</a>になって、AUプラグインが64bit専用になってしまいました。</p>
+
+<p>トリッキーな方法だけど、AU Labを使えば<a href="http://www.macprovideo.com/hub/logic-pro/how-to-run-32-bit-plug-ins-in-logic-pro-x">出来るらしい</a>。どうなんだろうこれ。</p>
 ]]></content>
   </entry>
   

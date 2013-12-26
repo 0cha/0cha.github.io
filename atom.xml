@@ -4,7 +4,7 @@
   <title><![CDATA[粗茶ですが]]></title>
   <link href="http://0cha.github.io/atom.xml" rel="self"/>
   <link href="http://0cha.github.io/"/>
-  <updated>2013-12-16T18:12:50+09:00</updated>
+  <updated>2013-12-26T13:05:41+09:00</updated>
   <id>http://0cha.github.io/</id>
   <author>
     <name><![CDATA[0cha]]></name>
@@ -12,15 +12,6 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[PhoneGap用のネイティブプラグイン作成]]></title>
-    <link href="http://0cha.github.io/blog/2013/12/16/creating-native-plugin-for-phonegap/"/>
-    <updated>2013-12-16T15:04:35+09:00</updated>
-    <id>http://0cha.github.io/blog/2013/12/16/creating-native-plugin-for-phonegap</id>
-    <content type="html"><![CDATA[
-]]></content>
-  </entry>
   
   <entry>
     <title type="html"><![CDATA[Logic Pro X: Scripterプラグインの使い方 その1]]></title>
